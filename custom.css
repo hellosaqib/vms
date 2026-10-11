@@ -1,0 +1,269 @@
+    .right-sidebar {
+      position: sticky;
+      right: 0;
+      top: 65px;
+      z-index: 100;
+
+    }
+
+    .metric-card {
+      transition: all 0.3s ease;
+      border-left: 4px solid #dee2e6;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .metric-positive {
+      border-left-color: #00d97e;
+    }
+
+    .metric-warning {
+      border-left-color: #f6c343;
+    }
+
+    .metric-danger {
+      border-left-color: #e63757;
+    }
+
+    .metric-info {
+      border-left-color: #2c7be5;
+    }
+
+    .alert-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+    }
+
+    .sparkline {
+      width: 60px;
+      height: 30px;
+    }
+
+    /* Quick Action Buttons */
+.quick-actions-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.quick-action-item {
+    text-decoration: none;
+    text-align: center;
+    min-width: 80px;
+    transition: transform 0.2s;
+    padding: 0.5rem;
+}
+
+.quick-action-item:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.action-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color:white;
+    font-size: 2.0rem;
+}
+
+.action-icon i {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.action-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    line-height: 1.2;
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+/* MOBILE: 3-4 per row */
+@media (max-width: 576px) {
+    .quick-actions-responsive {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.75rem;
+        justify-content: start;
+    }
+    
+    .quick-action-item {
+        min-width: auto;
+        padding: 0.25rem;
+    }
+    
+    .action-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .action-icon i {
+        font-size: 1.25rem;
+    }
+    
+    .action-label {
+        font-size: 0.7rem;
+        max-width: 80px;
+    }
+}
+
+/* TABLET: 5-6 per row */
+@media (min-width: 577px) and (max-width: 991px) {
+    .quick-actions-responsive {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+    
+    .action-icon {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* DESKTOP: ALL IN ONE ROW */
+@media (min-width: 992px) {
+    .quick-actions-responsive {
+        display: flex;
+        flex-wrap: nowrap; /* Force single row */
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+        gap: 1.25rem;
+    }
+    
+    .quick-action-item {
+        flex: 0 0 auto; /* Don't grow or shrink */
+        min-width: 85px;
+    }
+    
+    .action-icon {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .action-icon i {
+        font-size: 1.75rem;
+    }
+    
+    .action-label {
+        font-size: 0.8rem;
+        max-width: 85px;
+    }
+}
+
+/* LARGE DESKTOP: More spacing */
+@media (min-width: 1200px) {
+    .quick-actions-responsive {
+        gap: 1.5rem;
+    }
+    
+    .quick-action-item {
+        min-width: 90px;
+    }
+    
+    .action-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .action-icon i {
+        font-size: 2rem;
+    }
+}
+
+/* Scrollbar styling for desktop */
+@media (min-width: 992px) {
+    .quick-actions-responsive::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .quick-actions-responsive::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    
+    .quick-actions-responsive::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+    
+    .quick-actions-responsive::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+/* Color classes */
+.bg-primary { background: linear-gradient(135deg, #0d6efd, #0b5ed7); }
+.bg-warning { background: linear-gradient(135deg, #ffc107, #e0a800); }
+.bg-info { background: linear-gradient(135deg, #0dcaf0, #0ba6c8); }
+.bg-success { background: linear-gradient(135deg, #198754, #157347); }
+.bg-danger { background: linear-gradient(135deg, #dc3545, #b02a37); }
+.bg-secondary { background: linear-gradient(135deg, #6c757d, #545b62); }
+.bg-purple { background: linear-gradient(135deg, #6f42c1, #59359a); }
+.bg-dark { background: linear-gradient(135deg, #212529, #1a1e21); }
+.bg-teal { background: linear-gradient(135deg, #20c997, #1aa179); }
+.bg-indigo { background: linear-gradient(135deg, #6610f2, #520dc2); }
+.bg-pink { background: linear-gradient(135deg, #d63384, #b02a6d); }
+.bg-orange { background: linear-gradient(135deg, #fd7e14, #dc6502); }
+
+/* Row hover effect */
+              .vehicle-row:hover {
+                background-color: rgba(0, 0, 0, 0.02);
+              }
+
+              /* Color coding */
+              .text-success {
+                color: #00d97e !important;
+              }
+
+              .text-warning {
+                color: #f6c343 !important;
+              }
+
+              .text-danger {
+                color: #e63757 !important;
+              }
+
+              .text-info {
+                color: #39afd1 !important;
+              }
+
+              /* Star rating styling */
+              .fw-bold .fa-star {
+                color: #f6c343;
+                font-size: 0.9em;
+              }
+
+              /* Badge styling */
+              .badge {
+                font-size: 0.7em;
+                padding: 2px 6px;
+                margin-left: 3px;
+              }
+
+              /* Responsive table */
+              @media (max-width: 768px) {
+                .table-responsive {
+                  font-size: 0.85em;
+                }
+
+                .table th,
+                .table td {
+                  padding: 0.5rem;
+                }
+              }

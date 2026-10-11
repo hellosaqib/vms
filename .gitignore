@@ -1,0 +1,29 @@
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Local database credentials
+/includes/config/database.php
+/includes/config/secrets.php
+
+# Logs and temporary files
+*.log
+logs/
+/tmp/
+/cache/
+
+# Database exports and backups
+*.sql
+*.sql.gz
+*.bak
+*.zip
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/

@@ -1,0 +1,1421 @@
+/* =========================================================
+   BRITDRIVE AI
+   Floating AI Workspace
+   ========================================================= */
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.britdrive-ai-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1040;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+
+/*
+ * Only the actual AI panels should receive
+ * pointer interaction.
+ */
+.britdrive-ai-overlay > * {
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   BRITDRIVE AI
+   GLASS RESPONSE PANEL
+   ========================================================= */
+
+.britdrive-ai-response-panel {
+    position: absolute;
+
+    width: min(560px, calc(100vw - 40px));
+
+    max-height:
+        min(
+            620px,
+            calc(100vh - 160px)
+        );
+
+    overflow: hidden;
+
+    transform:
+        translate(-50%, -50%);
+
+    /*
+     * TRUE GLASS
+     *
+     * The background is intentionally translucent.
+     * Phoenix still controls the base colour.
+     */
+    background:
+        color-mix(
+            in srgb,
+            var(
+                --phoenix-body-bg,
+                var(--bs-body-bg, #ffffff)
+            ) 58%,
+            transparent
+        );
+
+    color:
+        var(
+            --phoenix-body-color,
+            var(--bs-body-color, #212529)
+        );
+
+    /*
+     * Glass blur.
+     */
+    backdrop-filter:
+        blur(28px)
+        saturate(160%);
+
+    -webkit-backdrop-filter:
+        blur(28px)
+        saturate(160%);
+
+    /*
+     * Glass edge.
+     */
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(
+                --phoenix-emphasis-color,
+                var(--bs-emphasis-color, #000000)
+            ) 12%,
+            transparent
+        );
+
+    border-radius: 18px;
+
+    /*
+     * Soft glass depth.
+     */
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.16),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+    pointer-events: auto;
+
+    user-select: none;
+
+    transition:
+        left 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        top 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.25s ease,
+        opacity 0.2s ease,
+        transform 0.25s ease;
+}
+
+/* =========================================================
+   FOCUSED PANEL
+   ========================================================= */
+
+.britdrive-ai-response-panel.is-focused {
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.20),
+        0 0 0 1px
+        rgba(99, 102, 241, 0.12);
+}
+
+
+/* =========================================================
+   DRAGGING
+   ========================================================= */
+
+.britdrive-ai-response-panel.is-dragging {
+    transition: none;
+
+    cursor: grabbing;
+
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, 0.25);
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   GLASS PANEL HEADER
+   Same opacity as the panel body
+   ========================================================= */
+
+.britdrive-ai-panel-header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 54px;
+
+    padding:
+        12px
+        14px
+        12px
+        18px;
+
+    /*
+     * EXACTLY the same glass opacity as the panel.
+     */
+    
+
+    border-bottom:
+        1px solid
+        color-mix(
+            in srgb,
+            var(
+                --phoenix-emphasis-color,
+                var(--bs-emphasis-color, #000000)
+            ) 10%,
+            transparent
+        );
+
+    cursor: grab;
+
+    touch-action: none;
+
+    -webkit-user-select: none;
+    user-select: none;
+
+    overflow: hidden;
+}
+
+
+.britdrive-ai-panel-header::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.30),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+.britdrive-ai-panel-header:active {
+    cursor: grabbing;
+}
+
+/* =========================================================
+   PANEL QUESTION
+   ========================================================= */
+
+.britdrive-ai-panel-question {
+    min-width: 0;
+
+    color:
+        var(
+            --phoenix-emphasis-color,
+            var(
+                --bs-emphasis-color,
+                inherit
+            )
+        );
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.britdrive-ai-panel-close {
+    flex:
+        0 0 auto;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 12px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color:
+        var(
+            --phoenix-secondary-color,
+            var(
+                --bs-secondary-color,
+                #6c757d
+            )
+        );
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    touch-action: manipulation;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.britdrive-ai-panel-close:hover {
+    background-color:
+        var(
+            --phoenix-tertiary-bg,
+            var(
+                --bs-tertiary-bg,
+                rgba(0, 0, 0, 0.08)
+            )
+        );
+
+    color:
+        var(
+            --phoenix-danger,
+            var(
+                --bs-danger,
+                #dc3545
+            )
+        );
+}
+
+
+.britdrive-ai-panel-close:active {
+    transform:
+        scale(0.92);
+}
+
+
+/* =========================================================
+   GLASS PANEL BODY
+   ========================================================= */
+
+.britdrive-ai-panel-body {
+    max-height:
+        calc(100vh - 230px);
+
+    overflow-y: auto;
+
+    padding: 22px;
+
+    background:
+        transparent;
+
+    color:
+        var(
+            --phoenix-body-color,
+            var(--bs-body-color, #212529)
+        );
+
+    scrollbar-width: thin;
+}
+
+
+/* =========================================================
+   ANSWER TEXT
+   ========================================================= */
+
+.britdrive-ai-answer-text {
+    color:
+        var(
+            --phoenix-body-color,
+            var(
+                --bs-body-color,
+                #212529
+            )
+        );
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   GLASS METRIC
+   ========================================================= */
+
+.britdrive-ai-metric {
+    position: relative;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    /*
+     * Slightly more transparent than the main panel.
+     */
+    
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(
+                --phoenix-emphasis-color,
+                var(--bs-emphasis-color, #000000)
+            ) 10%,
+            transparent
+        );
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.12);
+
+    color:
+        var(
+            --phoenix-body-color,
+            var(--bs-body-color, #212529)
+        );
+
+    overflow: hidden;
+}
+
+
+.britdrive-ai-metric-label {
+    margin-bottom: 8px;
+
+    color:
+        var(
+            --phoenix-secondary-color,
+            var(
+                --bs-secondary-color,
+                #6c757d
+            )
+        );
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+
+.britdrive-ai-metric-value {
+    color:
+        var(
+            --phoenix-emphasis-color,
+            var(
+                --bs-emphasis-color,
+                #212529
+            )
+        );
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+/* =========================================================
+   FINANCIAL SUMMARY
+   ========================================================= */
+
+.britdrive-ai-financial-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   FINANCIAL ITEM
+   ========================================================= */
+
+.britdrive-ai-financial-item {
+    padding: 16px;
+
+    border-radius: 12px;
+
+    background-color:
+        var(
+            --phoenix-secondary-bg,
+            var(
+                --bs-secondary-bg,
+                #f8f9fa
+            )
+        );
+
+    border:
+        1px solid
+        var(
+            --phoenix-border-color,
+            var(
+                --bs-border-color,
+                rgba(0, 0, 0, 0.1)
+            )
+        );
+
+    color:
+        var(
+            --phoenix-body-color,
+            var(
+                --bs-body-color,
+                #212529
+            )
+        );
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   FINANCIAL LABEL
+   ========================================================= */
+
+.britdrive-ai-financial-label {
+    margin-bottom: 6px;
+
+    color:
+        var(
+            --phoenix-secondary-color,
+            var(
+                --bs-secondary-color,
+                #6c757d
+            )
+        );
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FINANCIAL VALUE
+   ========================================================= */
+
+.britdrive-ai-financial-value {
+    color:
+        var(
+            --phoenix-emphasis-color,
+            var(
+                --bs-emphasis-color,
+                #212529
+            )
+        );
+
+    font-size: 1.05rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.britdrive-ai-table-wrapper {
+    width: 100%;
+
+    margin-top: 18px;
+
+    overflow-x: auto;
+
+    border:
+        1px solid
+        var(
+            --phoenix-border-color,
+            var(
+                --bs-border-color,
+                rgba(0, 0, 0, 0.1)
+            )
+        );
+
+    border-radius: 12px;
+
+    scrollbar-width: thin;
+}
+
+
+.britdrive-ai-table {
+    width: 100%;
+
+    min-width: 520px;
+
+    margin: 0;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    color:
+        var(
+            --phoenix-body-color,
+            var(
+                --bs-body-color,
+                #212529
+            )
+        );
+
+    font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.britdrive-ai-table thead th {
+    padding:
+        12px
+        14px;
+
+    background-color:
+        var(
+            --phoenix-secondary-bg,
+            var(
+                --bs-secondary-bg,
+                #f8f9fa
+            )
+        );
+
+    color:
+        var(
+            --phoenix-emphasis-color,
+            var(
+                --bs-emphasis-color,
+                #212529
+            )
+        );
+
+    border-bottom:
+        1px solid
+        var(
+            --phoenix-border-color,
+            var(
+                --bs-border-color,
+                rgba(0, 0, 0, 0.1)
+            )
+        );
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.britdrive-ai-table tbody td {
+    padding:
+        12px
+        14px;
+
+    background-color:
+        var(
+            --phoenix-body-bg,
+            var(
+                --bs-body-bg,
+                #ffffff
+            )
+        );
+
+    color:
+        var(
+            --phoenix-body-color,
+            var(
+                --bs-body-color,
+                #212529
+            )
+        );
+
+    border-bottom:
+        1px solid
+        var(
+            --phoenix-border-color,
+            var(
+                --bs-border-color,
+                rgba(0, 0, 0, 0.08)
+            )
+        );
+
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   LAST TABLE ROW
+   ========================================================= */
+
+.britdrive-ai-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   TABLE HOVER
+   ========================================================= */
+
+.britdrive-ai-table tbody tr {
+    transition:
+        background-color 0.15s ease;
+}
+
+
+.britdrive-ai-table tbody tr:hover td {
+    background-color:
+        var(
+            --phoenix-secondary-bg,
+            var(
+                --bs-secondary-bg,
+                rgba(0, 0, 0, 0.035)
+            )
+        );
+}
+
+
+/* =========================================================
+   TABLE LINKS
+   ========================================================= */
+
+.britdrive-ai-table a {
+    color:
+        var(
+            --phoenix-primary,
+            var(
+                --bs-primary,
+                #0d6efd
+            )
+        );
+
+    text-decoration: none;
+}
+
+
+.britdrive-ai-table a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TABLE STATUS
+   ========================================================= */
+
+.britdrive-ai-table .status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        4px
+        8px;
+
+    border-radius: 999px;
+
+    background-color:
+        var(
+            --phoenix-secondary-bg,
+            var(
+                --bs-secondary-bg,
+                #f8f9fa
+            )
+        );
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   TABLE EMPTY STATE
+   ========================================================= */
+
+.britdrive-ai-table-empty {
+    padding: 24px;
+
+    color:
+        var(
+            --phoenix-secondary-color,
+            var(
+                --bs-secondary-color,
+                #6c757d
+            )
+        );
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   STATUS LINE
+   ========================================================= */
+
+.britdrive-ai-status-line {
+    position: relative;
+
+    width: 100%;
+
+    height: 6px;
+
+    margin-bottom: 10px;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+
+.britdrive-ai-status-track {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 50%;
+
+    height: 2px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(128, 128, 128, 0.18),
+            transparent
+        );
+
+    border-radius: 999px;
+}
+
+
+.britdrive-ai-status-glow {
+    position: absolute;
+
+    top: 50%;
+
+    left: -15%;
+
+    width: 15%;
+
+    height: 4px;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 999px;
+
+    background:
+        currentColor;
+
+    box-shadow:
+        0 0 10px currentColor,
+        0 0 20px currentColor;
+
+    animation:
+        britdriveAiStatusIdle
+        3.5s linear infinite;
+}
+
+
+/* =========================================================
+   STATUS - IDLE
+   ========================================================= */
+
+.britdrive-ai-status-line.is-idle {
+    color:
+        var(
+            --phoenix-primary,
+            var(
+                --bs-primary,
+                #0d6efd
+            )
+        );
+}
+
+
+.britdrive-ai-status-line.is-idle
+.britdrive-ai-status-glow {
+    animation:
+        britdriveAiStatusIdle
+        3.5s linear infinite;
+}
+
+
+/* =========================================================
+   STATUS - LISTENING
+   ========================================================= */
+
+.britdrive-ai-status-line.is-listening {
+    color:
+        var(
+            --phoenix-success,
+            var(
+                --bs-success,
+                #198754
+            )
+        );
+}
+
+
+.britdrive-ai-status-line.is-listening
+.britdrive-ai-status-glow {
+    width: 25%;
+
+    animation:
+        britdriveAiStatusListening
+        0.8s ease-in-out infinite alternate;
+}
+
+
+/* =========================================================
+   STATUS - THINKING
+   ========================================================= */
+
+.britdrive-ai-status-line.is-thinking {
+    color:
+        var(
+            --phoenix-warning,
+            var(
+                --bs-warning,
+                #ffc107
+            )
+        );
+}
+
+
+.britdrive-ai-status-line.is-thinking
+.britdrive-ai-status-glow {
+    width: 20%;
+
+    animation:
+        britdriveAiStatusThinking
+        1.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   STATUS - ANSWERING
+   ========================================================= */
+
+.britdrive-ai-status-line.is-answering {
+    color:
+        var(
+            --phoenix-info,
+            var(
+                --bs-info,
+                #0dcaf0
+            )
+        );
+}
+
+
+.britdrive-ai-status-line.is-answering
+.britdrive-ai-status-glow {
+    width: 28%;
+
+    animation:
+        britdriveAiStatusAnswering
+        1.4s linear infinite;
+}
+
+
+/* =========================================================
+   STATUS - ERROR
+   ========================================================= */
+
+.britdrive-ai-status-line.is-error {
+    color:
+        var(
+            --phoenix-danger,
+            var(
+                --bs-danger,
+                #dc3545
+            )
+        );
+}
+
+
+.britdrive-ai-status-line.is-error
+.britdrive-ai-status-glow {
+    width: 35%;
+
+    animation:
+        britdriveAiStatusError
+        0.35s ease-in-out infinite alternate;
+}
+
+
+/* =========================================================
+   STATUS ANIMATIONS
+   ========================================================= */
+
+@keyframes britdriveAiStatusIdle {
+
+    0% {
+        left: -15%;
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 0.75;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0.35;
+    }
+}
+
+
+@keyframes britdriveAiStatusListening {
+
+    0% {
+        left: 10%;
+        transform:
+            translateY(-50%)
+            scaleY(0.6);
+    }
+
+    50% {
+        transform:
+            translateY(-50%)
+            scaleY(2.5);
+    }
+
+    100% {
+        left: 65%;
+        transform:
+            translateY(-50%)
+            scaleY(0.7);
+    }
+}
+
+
+@keyframes britdriveAiStatusThinking {
+
+    0% {
+        left: -20%;
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0.25;
+    }
+}
+
+
+@keyframes britdriveAiStatusAnswering {
+
+    0% {
+        left: -30%;
+        transform:
+            translateY(-50%)
+            scaleY(0.7);
+    }
+
+    50% {
+        transform:
+            translateY(-50%)
+            scaleY(2);
+    }
+
+    100% {
+        left: 100%;
+        transform:
+            translateY(-50%)
+            scaleY(0.7);
+    }
+}
+
+
+@keyframes britdriveAiStatusError {
+
+    0% {
+        opacity: 0.35;
+        transform:
+            translateY(-50%)
+            scaleX(0.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(-50%)
+            scaleX(1.2);
+    }
+}
+
+
+/* =========================================================
+   COMPOSER
+   ========================================================= */
+
+.britdrive-ai-footer {
+    width: 100%;
+
+    padding: 0;
+}
+
+
+.britdrive-ai-input-area {
+    width: 100%;
+
+    margin: 0;
+}
+
+
+.britdrive-ai-input-shell {
+    display: flex;
+
+    align-items: flex-end;
+
+    width: 100%;
+
+    min-height: 58px;
+
+    padding:
+        8px
+        8px
+        8px
+        18px;
+
+    background-color:
+        var(
+            --phoenix-body-bg,
+            var(
+                --bs-body-bg,
+                #ffffff
+            )
+        );
+
+    border:
+        1px solid
+        var(
+            --phoenix-border-color,
+            var(
+                --bs-border-color,
+                rgba(0, 0, 0, 0.15)
+            )
+        );
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.10);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.britdrive-ai-input-shell:focus-within {
+    border-color:
+        var(
+            --phoenix-primary,
+            var(
+                --bs-primary,
+                #0d6efd
+            )
+        );
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.12),
+        0 0 0 3px
+        rgba(13, 110, 253, 0.10);
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+#britdriveAiInput {
+    flex: 1;
+
+    width: 100%;
+
+    min-height: 40px;
+
+    max-height: 180px;
+
+    padding:
+        9px
+        4px;
+
+    resize: none;
+
+    overflow-y: auto;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color:
+        var(
+            --phoenix-body-color,
+            var(
+                --bs-body-color,
+                #212529
+            )
+        );
+
+    font-size: 0.95rem;
+
+    line-height: 1.45;
+}
+
+
+#britdriveAiInput::placeholder {
+    color:
+        var(
+            --phoenix-secondary-color,
+            var(
+                --bs-secondary-color,
+                #6c757d
+            )
+        );
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+   ========================================================= */
+
+.britdrive-ai-input-actions {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-left: 8px;
+}
+
+
+
+/* BritDriveAI composer action button */
+.britdrive-ai-action {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1 0%,
+        #8b5cf6 55%,
+        #06b6d4 100%
+    );
+
+    color: #ffffff;
+    font-size: 17px;
+
+    box-shadow:
+        0 4px 14px rgba(99, 102, 241, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
+}
+
+.britdrive-ai-action:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 20px rgba(99, 102, 241, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.britdrive-ai-action:active {
+    transform: scale(0.94);
+}
+
+.britdrive-ai-action i {
+    line-height: 1;
+}
+
+.britdrive-ai-action.is-thinking {
+    opacity: 0.75;
+    cursor: wait;
+}
+
+.britdrive-ai-action:disabled {
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PANEL CLOSE ANIMATION
+   ========================================================= */
+
+.britdrive-ai-response-panel.is-closing {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.92);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .britdrive-ai-response-panel {
+        width:
+            calc(100vw - 24px);
+
+        max-height:
+            calc(100vh - 150px);
+
+        border-radius: 16px;
+    }
+
+
+    .britdrive-ai-panel-body {
+        padding: 16px;
+    }
+
+
+    .britdrive-ai-financial-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .britdrive-ai-metric-value {
+        font-size: 1.7rem;
+    }
+
+
+    .britdrive-ai-table {
+        min-width: 480px;
+    }
+
+
+    .britdrive-ai-panel-header {
+        min-height: 50px;
+
+        padding-left: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .britdrive-ai-response-panel {
+        width:
+            calc(100vw - 16px);
+    }
+
+
+    .britdrive-ai-panel-body {
+        padding: 14px;
+    }
+
+
+    .britdrive-ai-input-shell {
+        border-radius: 16px;
+    }
+
+
+    .britdrive-ai-action {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .britdrive-ai-response-panel,
+    .britdrive-ai-action,
+    .britdrive-ai-panel-close {
+        transition: none;
+    }
+
+
+    .britdrive-ai-status-glow {
+        animation: none !important;
+    }
+}

@@ -1,0 +1,1427 @@
+Folder PATH listing
+Volume serial number is 000000A3 F865:1597
+C:.
+|   .gitignore
+|   access-denied.php
+|   accounts-report.php
+|   add-auction.php
+|   add-expense.php
+|   add-new-customer.php
+|   add-new-finance-company.php
+|   add-new-job-card.php
+|   add-new-permission.php
+|   add-new-post.php
+|   add-new-role.php
+|   add-new-user.php
+|   add-repair.php
+|   add-vehicle copy.php
+|   add-vehicle.php
+|   auth-test.php
+|   cancel-sale.php
+|   create-refund copy.php
+|   create-refund-old-form-submission.php
+|   create-refund.php
+|   custom.css
+|   dash.php
+|   dashboard.php
+|   edit-auction.php
+|   edit-customer.php
+|   edit-finance-company.php
+|   edit-invoice.php
+|   edit-job-card.php
+|   edit-permission.php
+|   edit-role.php
+|   edit-sale-vehicle.php
+|   edit-user-permissions.php
+|   edit-user.php
+|   edit-vehicle.php
+|   expense-dashboard.php
+|   fetch-vehicle.php
+|   footer.php
+|   gemini-test.php
+|   generate-icons.php
+|   gross-profit.php
+|   header.php
+|   index copy.php
+|   index-dash.php
+|   index-new.php
+|   index.php
+|   index1.php
+|   install-instructions.php
+|   inventory-aging-report.php
+|   left-menu.php
+|   login.php
+|   logout-old.php
+|   logout.php
+|   maintenance.php
+|   manage-customers.php
+|   manage-user-permissions.php
+|   manage-users.php
+|   manage-users2178387.php
+|   manifest.json
+|   new-spec-sheet.php
+|   new-spec-sheet1.php
+|   offline.html
+|   permissions.php
+|   print-vehicle copy.php
+|   print-vehicle.php
+|   process-job-card copy.php
+|   process-job-card.php
+|   process-payment copy.php
+|   process-payment.php
+|   process-refund.php
+|   profit-loss-report.php
+|   project-structure.txt
+|   pwa-test.php
+|   pwa-verify.php
+|   refund-details.php
+|   refund-management.php
+|   refund-receipt----.php
+|   refund-receipt.php
+|   render-menu.php
+|   roi-by-vehicle-report.php
+|   sale-invoice copy.php
+|   sale-invoice.php
+|   sale-receipt.php
+|   sale-vehicle-old.php
+|   sale-vehicle.php
+|   sales-ai-old.php
+|   sales-ai.php
+|   sales-history.php
+|   service-worker.js
+|   settings-dashboard.php
+|   splash_screen.php
+|   starter.html
+|   starter.php
+|   test-auth.php
+|   test-icons.php
+|   view-all-auctions.php
+|   view-all-cost-expenses.php
+|   view-all-costs.php
+|   view-all-finance-companies.php
+|   view-all-invoices.php
+|   view-all-job-cards.php
+|   view-all-permissions.php
+|   view-all-repairs.php
+|   view-all-roles.php
+|   view-all-sales.php
+|   view-all-sales1.php
+|   view-all-tasks.php
+|   view-all-vehicles.php
+|   view-job-card copy.php
+|   view-job-card.php
+|   view-vehicle.php
+|   workshop-efficiency-report.php
+|   
++---api
+|   |   britdrive-ai.php
+|   |   
+|   +---auth
+|   |       login.php
+|   |       logout.php
+|   |       
+|   \---vehicles
++---assets
+|   +---css
+|   |   |   britdrive-ai.css
+|   |   |   line.css
+|   |   |   theme-rtl.min.css
+|   |   |   theme.min.css
+|   |   |   user-rtl.min.css
+|   |   |   user.min.css
+|   |   |   
+|   |   \---generic
+|   |           59.html
+|   |           
+|   +---data
+|   |       usa.js
+|   |       world.js
+|   |       
+|   +---icons
+|   |       banner.png
+|   |       canmax-app.jpg
+|   |       favicon-16x16.png
+|   |       favicon-32x32.png
+|   |       favicon.ico
+|   |       icon-128x128.png
+|   |       icon-144x144.png
+|   |       icon-152x152.png
+|   |       icon-167x167.png
+|   |       icon-16x16.png
+|   |       icon-180x180.png
+|   |       icon-192x192.png
+|   |       icon-32x32.png
+|   |       icon-384x384.png
+|   |       icon-512x512.png
+|   |       icon-72x72.png
+|   |       icon-96x96.png
+|   |       logo-512x512.png
+|   |       
+|   +---img
+|   |   +---bg
+|   |   |       10-dark.png
+|   |   |       10.png
+|   |   |       13.png
+|   |   |       26.png
+|   |   |       28.png
+|   |   |       29.png
+|   |   |       30.png
+|   |   |       31.png
+|   |   |       32.png
+|   |   |       33.png
+|   |   |       34.png
+|   |   |       35.png
+|   |   |       37.png
+|   |   |       38.png
+|   |   |       39.png
+|   |   |       40.png
+|   |   |       41.jpg
+|   |   |       42.png
+|   |   |       43.png
+|   |   |       44.png
+|   |   |       45.png
+|   |   |       46.png
+|   |   |       47.png
+|   |   |       8-dark.png
+|   |   |       8.png
+|   |   |       9-dark.png
+|   |   |       9.png
+|   |   |       bg-1-2.png
+|   |   |       bg-11-dark.png
+|   |   |       bg-11.png
+|   |   |       bg-12.png
+|   |   |       bg-13.png
+|   |   |       bg-18.png
+|   |   |       bg-19.png
+|   |   |       bg-2.png
+|   |   |       bg-21.png
+|   |   |       bg-23.png
+|   |   |       bg-24.png
+|   |   |       bg-28.png
+|   |   |       bg-29.png
+|   |   |       bg-30.png
+|   |   |       bg-31.png
+|   |   |       bg-32.png
+|   |   |       bg-34.png
+|   |   |       bg-35.png
+|   |   |       bg-36.png
+|   |   |       bg-38.png
+|   |   |       bg-39.png
+|   |   |       bg-40.png
+|   |   |       bg-41.svg
+|   |   |       bg-5.png
+|   |   |       bg-dark-40.png
+|   |   |       bg-dark-5.png
+|   |   |       bg-left-15.png
+|   |   |       bg-left-17.png
+|   |   |       bg-left-20.png
+|   |   |       bg-left-21.png
+|   |   |       bg-left-22.png
+|   |   |       bg-left-23.png
+|   |   |       bg-left-24.png
+|   |   |       bg-left-25.png
+|   |   |       bg-left-26.png
+|   |   |       bg-left-27.png
+|   |   |       bg-left-28.png
+|   |   |       bg-left-29.png
+|   |   |       bg-left-30.png
+|   |   |       bg-left-31.png
+|   |   |       bg-left-32.png
+|   |   |       bg-left-33.png
+|   |   |       bg-left-5.png
+|   |   |       bg-right-15.png
+|   |   |       bg-right-17.png
+|   |   |       bg-right-20.png
+|   |   |       bg-right-21.png
+|   |   |       bg-right-22.png
+|   |   |       bg-right-23.png
+|   |   |       bg-right-24.png
+|   |   |       bg-right-25.png
+|   |   |       bg-right-26.png
+|   |   |       bg-right-27.png
+|   |   |       bg-right-28.png
+|   |   |       bg-right-30.png
+|   |   |       bg-right-31.png
+|   |   |       bg-right-32.png
+|   |   |       bg-right-33.png
+|   |   |       bg-right-6.png
+|   |   |       figma.png
+|   |   |       
+|   |   +---blog
+|   |   |       blog-1.png
+|   |   |       blog-2.png
+|   |   |       blog-3.png
+|   |   |       blog-4.png
+|   |   |       blog-5.png
+|   |   |       blog-6.png
+|   |   |       blog-7.png
+|   |   |       
+|   |   +---brand
+|   |   |       emirates-airline.png
+|   |   |       huawei.png
+|   |   |       japan-airline.png
+|   |   |       qatar-airline.png
+|   |   |       
+|   |   +---brand2
+|   |   |       apple-2.png
+|   |   |       asus-rog.png
+|   |   |       b.png
+|   |   |       blender.png
+|   |   |       dell.png
+|   |   |       discord.png
+|   |   |       facebook-f.png
+|   |   |       google-g.png
+|   |   |       honda.png
+|   |   |       hp.png
+|   |   |       ibm.png
+|   |   |       intel-2.png
+|   |   |       lenovo.png
+|   |   |       mail-bluster-1.png
+|   |   |       netflix-n.png
+|   |   |       oppo.png
+|   |   |       pocket.png
+|   |   |       redragon.png
+|   |   |       upwork.png
+|   |   |       xbox.png
+|   |   |       xiaomi.png
+|   |   |       yamaha.png
+|   |   |       
+|   |   +---brands
+|   |   |       apple-2.png
+|   |   |       asus-rog.png
+|   |   |       dell.png
+|   |   |       emirates.png
+|   |   |       google-store.png
+|   |   |       honda.png
+|   |   |       hp.png
+|   |   |       ibm.png
+|   |   |       intel-2.png
+|   |   |       jal.png
+|   |   |       lenovo.png
+|   |   |       oneplus-2.png
+|   |   |       oppo.png
+|   |   |       phoenix-firelines.png
+|   |   |       qatar-airways.png
+|   |   |       redragon.png
+|   |   |       suzuki-2.png
+|   |   |       xbox.png
+|   |   |       xiaomi.png
+|   |   |       yamaha.png
+|   |   |       
+|   |   +---chat
+|   |   |       1.png
+|   |   |       10.png
+|   |   |       11.png
+|   |   |       12.png
+|   |   |       13.png
+|   |   |       14.png
+|   |   |       2.png
+|   |   |       3.png
+|   |   |       4.png
+|   |   |       5.png
+|   |   |       6.png
+|   |   |       7.png
+|   |   |       8.png
+|   |   |       9.png
+|   |   |       
+|   |   +---country
+|   |   |       australia.png
+|   |   |       canada.png
+|   |   |       china-2.png
+|   |   |       china.png
+|   |   |       denmark.png
+|   |   |       england.png
+|   |   |       india-2.png
+|   |   |       india.png
+|   |   |       indonesia.png
+|   |   |       japan.png
+|   |   |       new-zealand.png
+|   |   |       norway.png
+|   |   |       qatar.png
+|   |   |       russia.png
+|   |   |       south-korea.png
+|   |   |       sweden.png
+|   |   |       switzerland.png
+|   |   |       thailand.png
+|   |   |       turkey.png
+|   |   |       usa-2.png
+|   |   |       usa.png
+|   |   |       vietnam.png
+|   |   |       
+|   |   +---e-commerce
+|   |   |       4.png
+|   |   |       5.png
+|   |   |       6.png
+|   |   |       best-in-market-bg.png
+|   |   |       gift-items-banner-bg.png
+|   |   |       review-11.jpg
+|   |   |       review-12.jpg
+|   |   |       review-13.jpg
+|   |   |       review-14.jpg
+|   |   |       review-15.jpg
+|   |   |       review-16.jpg
+|   |   |       whooping_banner_product.png
+|   |   |       whooping_banner_shape_2.png
+|   |   |       
+|   |   +---favicons
+|   |   |       apple-touch-icon.png
+|   |   |       favicon-16x16.png
+|   |   |       favicon-32x32.png
+|   |   |       favicon.ico
+|   |   |       manifest.json
+|   |   |       mstile-150x150.png
+|   |   |       
+|   |   +---file-manager
+|   |   |       1.png
+|   |   |       11.png
+|   |   |       12.png
+|   |   |       13.png
+|   |   |       15.png
+|   |   |       16.png
+|   |   |       2.png
+|   |   |       6.png
+|   |   |       7.png
+|   |   |       9.png
+|   |   |       
+|   |   +---gallery
+|   |   |       1.png
+|   |   |       10.png
+|   |   |       100.png
+|   |   |       101.png
+|   |   |       102.png
+|   |   |       103.png
+|   |   |       104.png
+|   |   |       105.png
+|   |   |       106.png
+|   |   |       106_large.png
+|   |   |       107_large.png
+|   |   |       108.png
+|   |   |       108_large.png
+|   |   |       109.png
+|   |   |       11.png
+|   |   |       111.png
+|   |   |       112.png
+|   |   |       113.png
+|   |   |       114.png
+|   |   |       115.png
+|   |   |       116.png
+|   |   |       117.png
+|   |   |       119.png
+|   |   |       12.png
+|   |   |       13.png
+|   |   |       14.png
+|   |   |       15.png
+|   |   |       16.png
+|   |   |       17.png
+|   |   |       18.png
+|   |   |       19.jpg
+|   |   |       19.png
+|   |   |       2.png
+|   |   |       20.jpg
+|   |   |       20.png
+|   |   |       21.jpg
+|   |   |       21.png
+|   |   |       22.png
+|   |   |       23.png
+|   |   |       24.png
+|   |   |       25.png
+|   |   |       26.png
+|   |   |       27.png
+|   |   |       28.png
+|   |   |       29.png
+|   |   |       3.png
+|   |   |       30.png
+|   |   |       31.png
+|   |   |       32.png
+|   |   |       33.png
+|   |   |       34.png
+|   |   |       35.png
+|   |   |       36.png
+|   |   |       37.png
+|   |   |       38.png
+|   |   |       39.png
+|   |   |       4.png
+|   |   |       40.png
+|   |   |       41.png
+|   |   |       42.png
+|   |   |       43.png
+|   |   |       44.png
+|   |   |       45.png
+|   |   |       46.png
+|   |   |       47.png
+|   |   |       48.png
+|   |   |       49.png
+|   |   |       5.png
+|   |   |       50.png
+|   |   |       51.png
+|   |   |       52.png
+|   |   |       53.png
+|   |   |       54.png
+|   |   |       55.png
+|   |   |       56.png
+|   |   |       57.png
+|   |   |       58.png
+|   |   |       59.png
+|   |   |       6.png
+|   |   |       60.png
+|   |   |       61.png
+|   |   |       62.png
+|   |   |       63.png
+|   |   |       64.png
+|   |   |       65.png
+|   |   |       66.png
+|   |   |       67.png
+|   |   |       68.png
+|   |   |       69.png
+|   |   |       7.png
+|   |   |       70.png
+|   |   |       71.png
+|   |   |       72.png
+|   |   |       73.png
+|   |   |       74.png
+|   |   |       75.png
+|   |   |       76.png
+|   |   |       77.png
+|   |   |       78.png
+|   |   |       79.png
+|   |   |       8.png
+|   |   |       80.png
+|   |   |       81.png
+|   |   |       82.png
+|   |   |       83.png
+|   |   |       84.png
+|   |   |       85.png
+|   |   |       86.png
+|   |   |       87.png
+|   |   |       88.png
+|   |   |       89.png
+|   |   |       89_large.png
+|   |   |       9.png
+|   |   |       90.png
+|   |   |       91.png
+|   |   |       91_large.png
+|   |   |       92.png
+|   |   |       92_large.png
+|   |   |       93.png
+|   |   |       94.png
+|   |   |       95.png
+|   |   |       95_large.png
+|   |   |       96.mp4
+|   |   |       96.png
+|   |   |       97.mp4
+|   |   |       97.png
+|   |   |       98.png
+|   |   |       99.mp4
+|   |   |       99.png
+|   |   |       bali-1.png
+|   |   |       bali-2.png
+|   |   |       bali-3.png
+|   |   |       paris-1.png
+|   |   |       paris-2.png
+|   |   |       paris-3.png
+|   |   |       sydney-1.png
+|   |   |       sydney-2.png
+|   |   |       sydney-3.png
+|   |   |       tokyo-1.png
+|   |   |       tokyo-2.png
+|   |   |       tokyo-3.png
+|   |   |       
+|   |   +---generic
+|   |   |       1.jpg
+|   |   |       28.jpg
+|   |   |       30.jpg
+|   |   |       31.jpg
+|   |   |       32.jpg
+|   |   |       33.jpg
+|   |   |       34.jpg
+|   |   |       34.png
+|   |   |       35.jpg
+|   |   |       36.png
+|   |   |       40.png
+|   |   |       41.png
+|   |   |       42.png
+|   |   |       43.png
+|   |   |       44.png
+|   |   |       45.png
+|   |   |       46.png
+|   |   |       5.jpg
+|   |   |       51.png
+|   |   |       52.png
+|   |   |       53.png
+|   |   |       54.png
+|   |   |       55.png
+|   |   |       56.png
+|   |   |       57.png
+|   |   |       59.png
+|   |   |       6.jpg
+|   |   |       66.jpg
+|   |   |       67.pdf
+|   |   |       7.jpg
+|   |   |       8.jpg
+|   |   |       9.jpg
+|   |   |       app-store.png
+|   |   |       auto.png
+|   |   |       capterra.png
+|   |   |       cover-photo.png
+|   |   |       default-dark.png
+|   |   |       default-light.png
+|   |   |       dual-dark.png
+|   |   |       dual-light.png
+|   |   |       nav-combo-dark.png
+|   |   |       nav-combo-light.png
+|   |   |       navbar-top-style-light.png
+|   |   |       play-store.png
+|   |   |       top-default-dark.png
+|   |   |       top-default.png
+|   |   |       top-slim-dark.png
+|   |   |       top-slim.png
+|   |   |       top-style-darker.png
+|   |   |       top-style-lighter.png
+|   |   |       vertical-darker.png
+|   |   |       vertical-lighter.png
+|   |   |       
+|   |   +---hotels
+|   |   |       1.png
+|   |   |       10.png
+|   |   |       11.png
+|   |   |       12.png
+|   |   |       13.png
+|   |   |       14.png
+|   |   |       15.png
+|   |   |       16.png
+|   |   |       17.png
+|   |   |       18.png
+|   |   |       19.png
+|   |   |       2.png
+|   |   |       20.png
+|   |   |       21.png
+|   |   |       22.png
+|   |   |       23.png
+|   |   |       24.png
+|   |   |       25.png
+|   |   |       25_2.png
+|   |   |       26.png
+|   |   |       26_2.png
+|   |   |       27.png
+|   |   |       27_2.png
+|   |   |       28.png
+|   |   |       28_2.png
+|   |   |       29.png
+|   |   |       29_2.png
+|   |   |       3.png
+|   |   |       30.png
+|   |   |       30_2.png
+|   |   |       31.png
+|   |   |       31_2.png
+|   |   |       32.png
+|   |   |       32_2.png
+|   |   |       33.png
+|   |   |       34.png
+|   |   |       35.png
+|   |   |       36.png
+|   |   |       37.png
+|   |   |       38.png
+|   |   |       39.png
+|   |   |       4.png
+|   |   |       40.png
+|   |   |       41.png
+|   |   |       42.png
+|   |   |       43.png
+|   |   |       44.png
+|   |   |       45.png
+|   |   |       46.png
+|   |   |       47.png
+|   |   |       48.png
+|   |   |       49.png
+|   |   |       5.png
+|   |   |       50.png
+|   |   |       51.png
+|   |   |       52.png
+|   |   |       53.png
+|   |   |       54.png
+|   |   |       55.png
+|   |   |       56.png
+|   |   |       57.png
+|   |   |       58.png
+|   |   |       59.png
+|   |   |       6.png
+|   |   |       60.png
+|   |   |       61.png
+|   |   |       62.png
+|   |   |       63.png
+|   |   |       64.png
+|   |   |       65.png
+|   |   |       66.png
+|   |   |       67.png
+|   |   |       68.png
+|   |   |       69.png
+|   |   |       7.png
+|   |   |       70.png
+|   |   |       71.png
+|   |   |       72.png
+|   |   |       73.png
+|   |   |       74.png
+|   |   |       75.png
+|   |   |       76.png
+|   |   |       78.png
+|   |   |       79.png
+|   |   |       8.png
+|   |   |       80.png
+|   |   |       81.png
+|   |   |       82.png
+|   |   |       83.png
+|   |   |       84.jpg
+|   |   |       85.jpg
+|   |   |       86.jpg
+|   |   |       87.jpg
+|   |   |       88.jpg
+|   |   |       89.jpg
+|   |   |       9.png
+|   |   |       90.jpg
+|   |   |       91.jpg
+|   |   |       92.jpg
+|   |   |       
+|   |   +---icons
+|   |   |   |   all-night-dark.png
+|   |   |   |   all-night.png
+|   |   |   |   bed-double.svg
+|   |   |   |   bed-double_dark.svg
+|   |   |   |   best-statistics-dark.png
+|   |   |   |   best-statistics.png
+|   |   |   |   cloud-upload.svg
+|   |   |   |   dollar-alt.svg
+|   |   |   |   dollar-alt_dark.svg
+|   |   |   |   editable-features-dark.png
+|   |   |   |   editable-features.png
+|   |   |   |   figma.png
+|   |   |   |   file-bg.png
+|   |   |   |   file-check-alt.svg
+|   |   |   |   file-check-alt_dark.svg
+|   |   |   |   file.png
+|   |   |   |   fly-map-marker.png
+|   |   |   |   fly-map-marker_dark.png
+|   |   |   |   image-icon.png
+|   |   |   |   info.svg
+|   |   |   |   info_dark.svg
+|   |   |   |   land-map-marker.png
+|   |   |   |   land-map-marker_dark.png
+|   |   |   |   lightning-speed-dark.png
+|   |   |   |   lightning-speed.png
+|   |   |   |   location.svg
+|   |   |   |   location_dark.svg
+|   |   |   |   logo-1.png
+|   |   |   |   logo-bg.png
+|   |   |   |   logo-white.png
+|   |   |   |   logo.png
+|   |   |   |   long-arrow-down.svg
+|   |   |   |   long-arrow.svg
+|   |   |   |   picture.svg
+|   |   |   |   picture_dark.svg
+|   |   |   |   plane.png
+|   |   |   |   plane_dark.png
+|   |   |   |   star.svg
+|   |   |   |   stop.png
+|   |   |   |   thumbs-up.png
+|   |   |   |   
+|   |   |   \---illustrations
+|   |   |           11.png
+|   |   |           12.png
+|   |   |           13.png
+|   |   |           14.png
+|   |   |           15.png
+|   |   |           16.png
+|   |   |           17.png
+|   |   |           18.png
+|   |   |           19.png
+|   |   |           21.png
+|   |   |           22.png
+|   |   |           23.png
+|   |   |           24.png
+|   |   |           25.png
+|   |   |           26.png
+|   |   |           bolt.png
+|   |   |           edit.png
+|   |   |           pie.png
+|   |   |           shield.png
+|   |   |           
+|   |   +---kanban
+|   |   |       1.jpg
+|   |   |       a1.jpg
+|   |   |       bg1.jpg
+|   |   |       bg2.jpg
+|   |   |       bg3.jpg
+|   |   |       bg4.jpg
+|   |   |       bg5.jpg
+|   |   |       bg6.jpg
+|   |   |       board-2.png
+|   |   |       board-3.png
+|   |   |       board-4.png
+|   |   |       board-5.png
+|   |   |       board-6.png
+|   |   |       board-8.png
+|   |   |       board-9.png
+|   |   |       board-dark.png
+|   |   |       board-ligth.png
+|   |   |       board.png
+|   |   |       glass.jpg
+|   |   |       home.jpg
+|   |   |       modal-bg.jpg
+|   |   |       wall.jpg
+|   |   |       
+|   |   +---logos
+|   |   |       american_express.png
+|   |   |       discover.png
+|   |   |       mastercard.png
+|   |   |       phoenix-mart.png
+|   |   |       visa.png
+|   |   |       
+|   |   +---nav-icons
+|   |   |       behance.webp
+|   |   |       bitbucket.webp
+|   |   |       figma.webp
+|   |   |       gitlab.webp
+|   |   |       google-cloud.webp
+|   |   |       google-drive.webp
+|   |   |       google-maps.webp
+|   |   |       google-photos.webp
+|   |   |       ln.webp
+|   |   |       pinterest.webp
+|   |   |       slack.webp
+|   |   |       spotify.webp
+|   |   |       trello.webp
+|   |   |       twitter.webp
+|   |   |       
+|   |   +---products
+|   |   |   |   1.png
+|   |   |   |   10.png
+|   |   |   |   12.png
+|   |   |   |   16.png
+|   |   |   |   17.png
+|   |   |   |   18.png
+|   |   |   |   19.png
+|   |   |   |   2.png
+|   |   |   |   20.png
+|   |   |   |   21.png
+|   |   |   |   23.png
+|   |   |   |   24.png
+|   |   |   |   25.png
+|   |   |   |   26.png
+|   |   |   |   27.png
+|   |   |   |   3.png
+|   |   |   |   4.png
+|   |   |   |   5.png
+|   |   |   |   6.png
+|   |   |   |   7.png
+|   |   |   |   8.png
+|   |   |   |   
+|   |   |   +---60x60
+|   |   |   |       1.png
+|   |   |   |       10.png
+|   |   |   |       11.png
+|   |   |   |       12.png
+|   |   |   |       13.png
+|   |   |   |       14.png
+|   |   |   |       15.png
+|   |   |   |       2.png
+|   |   |   |       3.png
+|   |   |   |       4.png
+|   |   |   |       5.png
+|   |   |   |       6.png
+|   |   |   |       7.png
+|   |   |   |       8.png
+|   |   |   |       9.png
+|   |   |   |       
+|   |   |   \---details
+|   |   |           blue_back.png
+|   |   |           blue_front.png
+|   |   |           green_back.png
+|   |   |           green_front.png
+|   |   |           orange_back.png
+|   |   |           orange_front.png
+|   |   |           purple_back.png
+|   |   |           purple_front.png
+|   |   |           red_back.png
+|   |   |           red_front.png
+|   |   |           silver_back.png
+|   |   |           silver_front.png
+|   |   |           yellow_back.png
+|   |   |           yellow_front.png
+|   |   |           
+|   |   +---sections
+|   |   |       1.webp
+|   |   |       10.webp
+|   |   |       11.webp
+|   |   |       12.webp
+|   |   |       13.webp
+|   |   |       14.webp
+|   |   |       15.webp
+|   |   |       16.webp
+|   |   |       2.webp
+|   |   |       21.webp
+|   |   |       22.webp
+|   |   |       23.webp
+|   |   |       24.webp
+|   |   |       25.webp
+|   |   |       26.webp
+|   |   |       3.webp
+|   |   |       4.webp
+|   |   |       5.webp
+|   |   |       6.webp
+|   |   |       63.webp
+|   |   |       64.webp
+|   |   |       65.webp
+|   |   |       66.webp
+|   |   |       7.webp
+|   |   |       8.webp
+|   |   |       9.webp
+|   |   |       combo-nav.webp
+|   |   |       demo-1.webp
+|   |   |       demo-4.webp
+|   |   |       demo-5.webp
+|   |   |       demo-6.webp
+|   |   |       demo-7.webp
+|   |   |       demo-8.webp
+|   |   |       demo-9-thumb.webp
+|   |   |       demo-9.webp
+|   |   |       demo.webp
+|   |   |       horizontal-slim.webp
+|   |   |       kanban.webp
+|   |   |       module-1.png
+|   |   |       module-10.png
+|   |   |       module-11.png
+|   |   |       module-12.png
+|   |   |       module-13.png
+|   |   |       module-14.png
+|   |   |       module-15.png
+|   |   |       module-16.png
+|   |   |       module-2.png
+|   |   |       module-3.png
+|   |   |       module-4.png
+|   |   |       module-5.png
+|   |   |       module-6.png
+|   |   |       module-7.png
+|   |   |       module-8.png
+|   |   |       module-9.png
+|   |   |       sidenav-dark.webp
+|   |   |       topnav-only.webp
+|   |   |       topnav-slim-combo.webp
+|   |   |       vertical-sidenav.webp
+|   |   |       
+|   |   +---spot-illustrations
+|   |   |       1.png
+|   |   |       13.png
+|   |   |       14.png
+|   |   |       15.png
+|   |   |       16.png
+|   |   |       2.png
+|   |   |       21.png
+|   |   |       22_2.png
+|   |   |       23_2.png
+|   |   |       24_2.png
+|   |   |       27.png
+|   |   |       31.png
+|   |   |       32.png
+|   |   |       33-s.webp
+|   |   |       34.png
+|   |   |       34_2.png
+|   |   |       35.png
+|   |   |       35_2.png
+|   |   |       36.png
+|   |   |       36_2.png
+|   |   |       37.png
+|   |   |       37_2.png
+|   |   |       38.webp
+|   |   |       39.png
+|   |   |       40.png
+|   |   |       403-illustration.png
+|   |   |       403.png
+|   |   |       404-illustration.png
+|   |   |       404.png
+|   |   |       41.png
+|   |   |       44-dark.png
+|   |   |       44.png
+|   |   |       45.png
+|   |   |       46.png
+|   |   |       500-illustration.png
+|   |   |       500.png
+|   |   |       air-plane-dark.png
+|   |   |       air-plane.png
+|   |   |       auth-dark.png
+|   |   |       auth.png
+|   |   |       bag-2-dark.png
+|   |   |       bag-2.png
+|   |   |       dark_1.png
+|   |   |       dark_13.png
+|   |   |       dark_14.png
+|   |   |       dark_15.png
+|   |   |       dark_16.png
+|   |   |       dark_2.png
+|   |   |       dark_21.png
+|   |   |       dark_22.png
+|   |   |       dark_23.png
+|   |   |       dark_24.png
+|   |   |       dark_27.png
+|   |   |       dark_30.png
+|   |   |       dark_38.webp
+|   |   |       dark_40.png
+|   |   |       dark_403-illustration.png
+|   |   |       dark_403.png
+|   |   |       dark_404-illustration.png
+|   |   |       dark_404.png
+|   |   |       dark_41.png
+|   |   |       dark_45.png
+|   |   |       dark_46.png
+|   |   |       dark_500-illustration.png
+|   |   |       dark_500.png
+|   |   |       earth-plane-dark.png
+|   |   |       earth-plane.png
+|   |   |       i-phone-dark.png
+|   |   |       i-phone.png
+|   |   |       light_30.png
+|   |   |       rocket-dark.png
+|   |   |       rocket.png
+|   |   |       shield-2-dark.png
+|   |   |       shield-2.png
+|   |   |       star-dark.png
+|   |   |       star.png
+|   |   |       timeline-dark.png
+|   |   |       timeline.png
+|   |   |       
+|   |   +---team
+|   |   |   |   1.webp
+|   |   |   |   10.webp
+|   |   |   |   11.webp
+|   |   |   |   12.webp
+|   |   |   |   13.webp
+|   |   |   |   14.webp
+|   |   |   |   15.webp
+|   |   |   |   16.webp
+|   |   |   |   17.webp
+|   |   |   |   18.webp
+|   |   |   |   19.webp
+|   |   |   |   2.webp
+|   |   |   |   20.webp
+|   |   |   |   21.webp
+|   |   |   |   22.webp
+|   |   |   |   23.webp
+|   |   |   |   24.webp
+|   |   |   |   25.webp
+|   |   |   |   26.webp
+|   |   |   |   27.webp
+|   |   |   |   28.webp
+|   |   |   |   29.webp
+|   |   |   |   3.webp
+|   |   |   |   30.webp
+|   |   |   |   31.webp
+|   |   |   |   32.webp
+|   |   |   |   33.webp
+|   |   |   |   34.webp
+|   |   |   |   35.webp
+|   |   |   |   4.webp
+|   |   |   |   5.webp
+|   |   |   |   57.webp
+|   |   |   |   58.webp
+|   |   |   |   59.webp
+|   |   |   |   6.webp
+|   |   |   |   60.webp
+|   |   |   |   61.webp
+|   |   |   |   62.webp
+|   |   |   |   63.webp
+|   |   |   |   64.webp
+|   |   |   |   65.webp
+|   |   |   |   66.webp
+|   |   |   |   67.webp
+|   |   |   |   68.webp
+|   |   |   |   69.webp
+|   |   |   |   7.webp
+|   |   |   |   70.webp
+|   |   |   |   71.webp
+|   |   |   |   72.webp
+|   |   |   |   73.webp
+|   |   |   |   74.webp
+|   |   |   |   75.webp
+|   |   |   |   76.webp
+|   |   |   |   8.webp
+|   |   |   |   9.webp
+|   |   |   |   avatar-placeholder.webp
+|   |   |   |   avatar.webp
+|   |   |   |   r.webp
+|   |   |   |   
+|   |   |   +---150x150
+|   |   |   |       58.webp
+|   |   |   |       
+|   |   |   +---40x40
+|   |   |   |       10.webp
+|   |   |   |       12.webp
+|   |   |   |       24.webp
+|   |   |   |       26.webp
+|   |   |   |       29.webp
+|   |   |   |       3.webp
+|   |   |   |       30.webp
+|   |   |   |       57.webp
+|   |   |   |       58.webp
+|   |   |   |       59.webp
+|   |   |   |       8.webp
+|   |   |   |       9.webp
+|   |   |   |       avatar.webp
+|   |   |   |       
+|   |   |   \---72x72
+|   |   |           57.webp
+|   |   |           58.webp
+|   |   |           
+|   |   \---trip
+|   |           1.png
+|   |           10.png
+|   |           11.jpg
+|   |           12.jpg
+|   |           13.jpg
+|   |           14.jpg
+|   |           15.jpg
+|   |           16.jpg
+|   |           17.png
+|   |           18.png
+|   |           19.png
+|   |           2.png
+|   |           20.png
+|   |           21.png
+|   |           22.png
+|   |           23.png
+|   |           24.png
+|   |           25.png
+|   |           25_large.jpg
+|   |           26.png
+|   |           26_large.jpg
+|   |           27.png
+|   |           27_large.jpg
+|   |           28.png
+|   |           28_large.jpg
+|   |           29.png
+|   |           29_large.jpg
+|   |           3.png
+|   |           30.png
+|   |           30_large.jpg
+|   |           31.png
+|   |           31_large.jpg
+|   |           32.png
+|   |           32_large.jpg
+|   |           33.png
+|   |           33_large.jpg
+|   |           4.png
+|   |           5.png
+|   |           6.png
+|   |           7.png
+|   |           8.png
+|   |           9.png
+|   |           
+|   +---js
+|   |       britdrive-ai.js
+|   |       calendar.js
+|   |       config.js
+|   |       crm-analytics.js
+|   |       crm-dashboard.js
+|   |       echarts-example.js
+|   |       ecommerce-dashboard.js
+|   |       file-manager.js
+|   |       phoenix.js
+|   |       project-details.js
+|   |       projectmanagement-dashboard.js
+|   |       showcase.js
+|   |       travel-agency-dashboard.js
+|   |       
+|   \---video
+|           1.mp4
+|           1.png
+|           2.mp4
+|           2.png
+|           3.mp4
+|           3.png
+|           4.mp4
+|           4.png
+|           travel.mp4
+|           travel.png
+|           
++---cgi-bin
++---includes
+|   |   auth.php
+|   |   check_auth.php
+|   |   config.php
+|   |   cost_calculations.php
+|   |   dashboard_functions.php
+|   |   dashboard_functions2.php
+|   |   errors.php
+|   |   expense_functions.php
+|   |   functions.php
+|   |   menu_config.php
+|   |   refund_calculations.php
+|   |   reports_functions.php
+|   |   user_manager.php
+|   |   
+|   +---ai
+|   |   |   access.php
+|   |   |   data-old.php
+|   |   |   data.php
+|   |   |   filter.php
+|   |   |   presentation.php
+|   |   |   provider.php
+|   |   |   tools.php
+|   |   |   ui.php
+|   |   |   
+|   |   \---tools
+|   |           registry.php
+|   |           sales.php
+|   |           
+|   +---auctions
+|   |       auction_functions.php
+|   |       
+|   +---auth
+|   |       auth.php
+|   |       permissions.php
+|   |       
+|   +---commissions
+|   |       commission_functions.php
+|   |       
+|   +---config
+|   |       config.php
+|   |       currency.php
+|   |       database.php
+|   |       menu_config.php
+|   |       secrets.php
+|   |       
+|   +---customers
+|   |       customer_functions.php
+|   |       
+|   +---data
+|   |       sales.php
+|   |       
+|   +---finance
+|   |       finance_company_functions.php
+|   |       
+|   +---payments
+|   |       payment_functions.php
+|   |       
+|   +---refunds
+|   |       refund_deduction_functions.php
+|   |       refund_functions.php
+|   |       
+|   +---reservations
+|   |       reservation_functions.php
+|   |       
+|   +---sales
+|   |       sales_functions.php
+|   |       
+|   \---vehicles
+|           vehicle_functions.php
+|           
++---layout
+|       content.php
+|       footer.php
+|       header.php
+|       left-menu.php
+|       
++---reports
+|       daily-inventory-report.php
+|       get_inventory.php
+|       monthly-pl-report.php
+|       weekly-sale-report.php
+|       
++---splash_screens
+|       10.2__iPad_landscape.png
+|       10.2__iPad_portrait.png
+|       10.5__iPad_Air_landscape.png
+|       10.5__iPad_Air_portrait.png
+|       10.9__iPad_Air_landscape.png
+|       10.9__iPad_Air_portrait.png
+|       11__iPad_Pro_M4_landscape.png
+|       11__iPad_Pro_M4_portrait.png
+|       11__iPad_Pro__10.5__iPad_Pro_landscape.png
+|       11__iPad_Pro__10.5__iPad_Pro_portrait.png
+|       12.9__iPad_Pro_landscape.png
+|       12.9__iPad_Pro_portrait.png
+|       13__iPad_Pro_M4_landscape.png
+|       13__iPad_Pro_M4_portrait.png
+|       4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png
+|       4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png
+|       8.3__iPad_Mini_landscape.png
+|       8.3__iPad_Mini_portrait.png
+|       9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png
+|       9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png
+|       icon.png
+|       iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png
+|       iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png
+|       iPhone_11__iPhone_XR_landscape.png
+|       iPhone_11__iPhone_XR_portrait.png
+|       iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png
+|       iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png
+|       iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png
+|       iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png
+|       iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png
+|       iPhone_16e__iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png
+|       iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png
+|       iPhone_16_Plus__iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png
+|       iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png
+|       iPhone_16__iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png
+|       iPhone_17_Pro_Max__iPhone_16_Pro_Max_landscape.png
+|       iPhone_17_Pro_Max__iPhone_16_Pro_Max_portrait.png
+|       iPhone_17_Pro__iPhone_17__iPhone_16_Pro_landscape.png
+|       iPhone_17_Pro__iPhone_17__iPhone_16_Pro_portrait.png
+|       iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png
+|       iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png
+|       iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png
+|       iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png
+|       iPhone_Air_landscape.png
+|       iPhone_Air_portrait.png
+|       
++---uploads
+|   +---images
+|   |       britdrive-01.svg
+|   |       britdrive.3D2.jpg
+|   |       britdrive.ico
+|   |       britdrive.jpg
+|   |       britdrive.png-3d.png
+|   |       
+|   \---vehicles
+|           default-car.jpg
+|           vehicle_11_1.jpg
+|           vehicle_12_1.jpg
+|           vehicle_13_1.jpg
+|           vehicle_14_1.jpg
+|           vehicle_1_1.jpg
+|           vehicle_1_2.jpg
+|           vehicle_1_3.jpg
+|           vehicle_26_1.jpeg
+|           vehicle_2_1.jpg
+|           vehicle_53_1.jpg
+|           vehicle_62_1.png
+|           vehicle_6_1.jpg
+|           vehicle_6_2.jpg
+|           vehicle_6_3.jpg
+|           vehicle_7_1.jpg
+|           vehicle_7_2.jpg
+|           vehicle_7_3.jpg
+|           vehicle_8_1.jpg
+|           vehicle_8_1759852297_0.jpg
+|           vehicle_8_1759852297_1.jpg
+|           vehicle_9_1.jpg
+|           
++---vehicles
+\---vendors
+    +---anchorjs
+    |       anchor.min.js
+    |       
+    +---bigpicture
+    |       BigPicture.js
+    |       
+    +---bootstrap
+    |       bootstrap.min.js
+    |       
+    +---choices
+    |       choices.min.css
+    |       choices.min.js
+    |       
+    +---countup
+    |       countUp.umd.js
+    |       
+    +---dayjs
+    |       dayjs.min.js
+    |       
+    +---dhtmlx-gantt
+    |       dhtmlxgantt.css
+    |       dhtmlxgantt.js
+    |       
+    +---dropzone
+    |       dropzone-min.js
+    |       dropzone.css
+    |       
+    +---echarts
+    |       echarts.min.js
+    |       
+    +---feather-icons
+    |       feather.min.js
+    |       
+    +---flatpickr
+    |       flatpickr.min.css
+    |       flatpickr.min.js
+    |       
+    +---fontawesome
+    |       all.min.js
+    |       
+    +---fullcalendar
+    |       index.global.min.js
+    |       
+    +---glightbox
+    |       glightbox.min.css
+    |       glightbox.min.js
+    |       
+    +---imagesloaded
+    |       imagesloaded.pkgd.min.js
+    |       
+    +---is
+    |       is.min.js
+    |       
+    +---isotope-layout
+    |       isotope.pkgd.min.js
+    |       
+    +---isotope-packery
+    |       packery-mode.pkgd.min.js
+    |       
+    +---leaflet
+    |   |   leaflet.css
+    |   |   leaflet.js
+    |   |   
+    |   \---images
+    |           layers-2x.html
+    |           layers.html
+    |           marker-icon.html
+    |           
+    +---leaflet.markercluster
+    |       leaflet.markercluster.js
+    |       MarkerCluster.css
+    |       MarkerCluster.Default.css
+    |       
+    +---leaflet.tilelayer.colorfilter
+    |       leaflet-tilelayer-colorfilter.min.js
+    |       
+    +---list.js
+    |       list.min.js
+    |       
+    +---lodash
+    |       lodash.min.js
+    |       
+    +---lottie
+    |       lottie.min.js
+    |       
+    +---mapbox-gl
+    |       mapbox-gl.css
+    |       mapbox-gl.js
+    |       
+    +---nouislider
+    |       nouislider.min.css
+    |       nouislider.min.js
+    |       
+    +---popper
+    |       popper.min.js
+    |       
+    +---prism
+    |       prism-okaidia.css
+    |       prism.js
+    |       
+    +---rater-js
+    |       index.js
+    |       
+    +---simplebar
+    |       simplebar.min.css
+    |       simplebar.min.js
+    |       
+    +---sortablejs
+    |       Sortable.min.js
+    |       
+    +---swiper
+    |       swiper-bundle.min.css
+    |       swiper-bundle.min.js
+    |       
+    +---tinymce
+    |       tinymce.min.js
+    |       
+    \---typed.js
+            typed.umd.js
+            
